@@ -15,31 +15,31 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     
     if(playerSelection.toUpperCase() === "ROCK") {
-        if(computerSelection ==="ROCK"){
+        if(computerSelection === "ROCK"){
             return "Tie";
         } else if(computerSelection === "PAPER") {
-            lose += 1;
+            
             return "You Lose! Paper beats Rock!";
         } else {
-            win += 1;
+           
             return "You Win! Rock beats Scissors!";
         } 
     } else if(playerSelection.toUpperCase() === "PAPER") {
         if (computerSelection === "ROCK") {
-            win += 1;
+           
             return "You Win! Paper beats Rock!";
         } else if(computerSelection === "PAPER") {
             return "Tie";
         } else {
-            lose += 1;
+            
             return "You Lose! Scissors beats Paper!";
         }
     } else if (playerSelection.toUpperCase() === "SCISSORS") {
         if(computerSelection === "PAPER") {
-            win += 1;
+            
             return "You Win! Scissors beats Paper!";
         } else if (computerSelection === "ROCK") {
-            lose += 1;
+            
             return "You lose! Rock beats Scissors";
         } else {
             return "Tie";
@@ -60,8 +60,7 @@ function game(){
         alert(playRound(playerSelection, computerSelection));
         console.log(playRound(playerSelection, computerSelection));
     }
-    console.log(win);
-    console.log(lose);
+    
     if(win>lose){
         alert("You won best of 5!");
     } else if (win<lose) {
@@ -74,8 +73,10 @@ function game(){
     }
 }
 
-game();
+game(); 
 
+console.log(win);
+    console.log(lose);
 
 
 
